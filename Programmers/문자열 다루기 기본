@@ -1,0 +1,14 @@
+def solution(s):
+    answer = True
+    cnt = 0
+    if len(s) == 4 or len(s) == 6:
+        for i in range(len(s)):
+            if 47 < ord(s[i]) < 58:
+                cnt += 1
+        if cnt == len(s):
+            answer = True
+        else:
+            answer = False
+    else:
+        answer = False
+    return answer
