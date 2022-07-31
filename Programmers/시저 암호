@@ -1,0 +1,16 @@
+def solution(s, n):
+    answer = ''
+    for i in range(len(s)):
+        if ord(s[i]) == 32:
+            answer += ' '
+        elif s[i].isupper():
+            if ord(s[i])+n > 90:
+                answer += chr(64+(ord(s[i])+n)-90)
+            else:
+                answer += chr((ord(s[i])+n))
+        elif s[i].islower():
+            if (ord(s[i])+n) > 122:
+                answer += chr(96+(ord(s[i])+n)-122)
+            else:
+                answer += chr((ord(s[i])+n))
+    return answer
