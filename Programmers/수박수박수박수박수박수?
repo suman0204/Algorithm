@@ -1,0 +1,10 @@
+def solution(n):
+    answer = ''
+    wm = ['수','박']
+    for i in range(n):
+        if i % 2 == 0:
+            answer += wm[0]
+        elif i % 2 != 0:
+            answer += wm[1]
+        
+    return answer
