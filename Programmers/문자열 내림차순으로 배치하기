@@ -1,0 +1,12 @@
+def solution(s):
+    answer = ''
+    temp = []
+    for i in range(len(s)):
+        temp.append(ord(s[i]))
+    
+    temp.sort(reverse = True)
+    
+    for j in range(len(temp)):
+        answer += chr(temp[j])
+    
+    return answer
