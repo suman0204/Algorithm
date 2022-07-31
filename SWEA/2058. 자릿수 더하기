@@ -1,0 +1,8 @@
+a = int(input())
+sum1 = 0
+
+for i in range(4):
+    k = a%10
+    sum1 += k
+    a = a//10
+print(sum1)
