@@ -1,0 +1,23 @@
+def solution(left, right):
+    answer = 0
+    arr = []
+    divisor = []
+    
+    for i in range(left, right+1):
+        arr.append(i)
+    print(arr)
+    
+    for j in range(len(arr)):
+        cnt = 0
+        for k in range(1, arr[j]+1):
+            if arr[j] % k == 0:
+                cnt += 1
+        divisor.append(cnt)   
+    
+    for l in range(len(arr)):
+        if divisor[l] % 2 == 0:
+            answer += arr[l]
+        else:
+            answer -= arr[l]
+    
+    return answer
