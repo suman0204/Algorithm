@@ -1,0 +1,23 @@
+def solution(answers):
+    answer = []
+    temp = [0, 0, 0]
+    
+    s1 = [1, 2, 3, 4, 5]
+    s2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    s3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    
+    for i in range(len(answers)):
+        if answers[i] == s1[i%len(s1)]:
+            temp[0] += 1
+        if answers[i] == s2[i%len(s2)]:
+            temp[1] += 1
+        if answers[i] == s3[i%len(s3)]:
+            temp[2] += 1
+    print(temp)
+    
+    max_score = max(temp)
+    for i in range(len(temp)):
+        if temp[i] == max_score:
+            answer.append(i+1)
+    
+    return answer
