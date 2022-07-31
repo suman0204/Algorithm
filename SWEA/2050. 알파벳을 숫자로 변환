@@ -1,0 +1,3 @@
+h = input()
+for i in range(len(h)):
+    print(ord(h[i])-64, end = " ")
