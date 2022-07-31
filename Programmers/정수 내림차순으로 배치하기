@@ -1,0 +1,12 @@
+def solution(n):
+    answer = 0
+    s = str(n)
+    rs = ''
+    lst = list(s)
+    lst.sort()
+    lst.reverse()
+    for i in range(len(lst)):
+        rs += lst[i]
+    answer = int(rs)
+    
+    return answer
