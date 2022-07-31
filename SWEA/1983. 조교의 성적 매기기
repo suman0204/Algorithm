@@ -1,0 +1,18 @@
+T = int(input())
+# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
+for test_case in range(1, T + 1):
+    # ///////////////////////////////////////////////////////////////////////////////////
+    N, k = map(int, input().split())
+    grade=['A+','A0','A-','B+','B0','B-','C+','C0','C-','D0']
+    total_lst = []
+
+    for i in range(N):
+        mid, final, assign = map(int,input().split())
+        total = mid*0.35 + final*0.45 + assign*0.2
+        total_lst.append(total)
+
+    k_score = total_lst[k-1]
+    total_lst.sort(reverse=True)
+    k_grade = total_lst.index(k_score)//(N//10)
+
+    print("#{} {}".format(test_case, grade[k_grade]))
